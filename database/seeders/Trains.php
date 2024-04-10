@@ -27,6 +27,7 @@ class Trains extends Seeder
             $newTrain->on_time = $faker->boolean();
             $newTrain->canceled = $faker->boolean();
 
+
             $newTrain->save();
         }
     }

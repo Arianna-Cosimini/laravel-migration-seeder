@@ -1,8 +1,13 @@
 @extends('layouts/app')
+@section('title')
+Trains
+@endsection
+
+
 
 @section('content')
     <div class="container py-5">
-        <h1>Lista dei Treni</h1>
+        <h1 class="text-center text-uppercase display-1 mb-4 fw-bold">Lista dei Treni</h1>
 
 
         <div class="row row-cols-4">
@@ -11,9 +16,9 @@
 
             @foreach ($trains as $train)
                 <div class="col p-2">
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ $train->company }}</h5>
+                    <div class="card bg-light text-black" style="width: 18rem; height:450px">
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <h5 class="card-title text-uppercase fw-bold">{{ $train->company }}</h5>
                             <p class="card-text"><span class="fw-bold">In arrivo da: </span>{{ $train->arrival_station }}</p>
                             <span class="fw-bold">Alle ore: {{ $train->arrival_time }} </span>
 
